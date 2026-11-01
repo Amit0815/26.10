@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order delivery — Labzak Minimarket</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Labzak Minimarket</h1>
+        <p>Open 8:00 to 22:00, every day</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="prices.html">Prices</a>
+        <a href="join.html">Join club</a>
+        <a href="order.html" class="current">Order</a>
+    </nav>
+    <main>
+        <h2>Order delivery</h2>
+        <p>Fill in the form and we bring your order. Delivery is free above 100 000 so'm.</p>
+        
+        <form action="order.html" method="get">
+            <fieldset>
+                <legend>You</legend>
+                <p>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required placeholder="Name" autocomplete="name">
+                </p>
+                <p>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="901234567" pattern="[0-9]{9}" title="9 digits, like 901234567">
+                </p>
+                <p>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="email@gmail.com">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery</legend>
+                <p>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" value="Tashkent" readonly>
+                </p>
+                <p>
+                    <label for="address">Street, house, flat</label>
+                    <textarea id="address" name="address" rows="2" cols="40" required></textarea>
+                </p>
+                <p>
+                    <label for="zone">Zone</label>
+                    <select id="zone" name="zone" required>
+                        <option value="">- choose -</option>
+                        <option value="a">A, up to 1 km</option>
+                        <option value="b">B, 1 to 2 km</option>
+                        <option value="c">C, over 2 km</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="day">Day</label>
+                    <input type="date" id="day" name="day" required>
+                </p>
+                <p>
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" min="09:00" max="21:00">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your order</legend>
+                <p>
+                    <label for="water">Water</label>
+                    <select id="water" name="water">
+                        <optgroup label="Still">
+                            <option value="still-1.5">1.5 litres</option>
+                            <option value="still-5">5 litres</option>
+                        </optgroup>
+                        <optgroup label="Sparkling">
+                            <option value="spark-0.5">0.5 litres</option>
+                            <option value="spark-1.5">1.5 litres</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="bottles">Bottles</label>
+                    <input type="number" id="bottles" name="bottles" value="1" min="1" max="24">
+                </p>
+                <p>
+                    <label for="list">Anything else? Your shopping list</label>
+                    <textarea id="list" name="list" rows="4" cols="40" maxlength="300"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extras</legend>
+                <p>
+                    <input type="checkbox" id="bag" name="extra" value="bag">
+                    <label for="bag" class="inline">Add a paper bag</label>
+                    <input type="checkbox" id="call" name="extra" value="call">
+                    <label for="call" class="inline">Call me before you come</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment</legend>
+                <p>
+                    <input type="radio" id="cash" name="pay" value="cash" checked>
+                    <label for="cash" class="inline">Cash</label>
+                    <input type="radio" id="card" name="pay" value="card">
+                    <label for="card" class="inline">Card</label>
+                </p>
+            </fieldset>
+
+            <input type="hidden" name="source" value="website">
+
+            <p>
+                <button type="submit">Order</button>
+                <button type="reset">Clear</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>2026 Labzak Minimarket · Labzak street, Tashkent</p>
+    </footer>
+</body>
+</html>

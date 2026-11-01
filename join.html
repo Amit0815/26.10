@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Club - Labzak Minimarket</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Labzak Minimarket</h1>
+        <p>Open 8:00 to 22:00, every day</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="prices.html">Prices</a>
+        <a href="join.html" class="current">Join club</a>
+        <a href="order.html">Order</a>
+    </nav>
+    <main>
+        <h2>Join the Labzak club</h2>
+        <p>Get exclusive discounts, weekly fresh bread notifications, and special student offers right to your email!</p>
+        
+        <form action="join.html" method="get">
+            <fieldset>
+                <legend>About you</legend>
+                <p> 
+                    <label for="member-name">Your Name</label>
+                    <input type="text" id="member-name" name="name" required placeholder="Name" autocomplete="name">
+                </p>
+                <p>
+                    <label for="member-phone">Phone</label>
+                    <input type="tel" id="member-phone" name="phone" required placeholder="901234567" pattern="[0-9]{9}" title="9 digits, like 901234567">
+                </p>
+                <p>
+                    <label for="member-email">E-mail</label>
+                    <input type="email" id="member-email" name="email" required placeholder="email@gmail.com">
+                </p>
+                <p>
+                    <label for="member-age">Your Age</label>
+                    <input type="number" id="member-age" name="age" min="12" max="100" placeholder="Age">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+                <p>
+                    <input type="radio" id="friend" name="source_ref" value="friend" checked>
+                    <label for="friend" class="inline">A friend</label>
+                    <input type="radio" id="poster" name="source_ref" value="poster">
+                    <label for="poster" class="inline">University poster</label>
+                    <input type="radio" id="social" name="source_ref" value="social">
+                    <label for="social" class="inline">Social media</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <p>
+                    <input type="checkbox" id="notifications" name="notifications" value="yes" checked>
+                    <label for="notifications" class="inline">Receive weekly offers</label>
+                </p>
+            </fieldset>
+
+            <input type="hidden" name="club" value="2026">
+
+            <p>
+                <button type="submit">Sign Up</button>
+                <button type="reset">Clear</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>2026 Labzak Minimarket · Labzak street, Tashkent</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — Labzak Minimarket</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Labzak Minimarket</h1>
+        <p>Open 8:00 to 22:00, every day</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="current">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="prices.html">Prices</a>
+        <a href="join.html">Join club</a>
+        <a href="order.html">Order</a>
+    </nav>
+    <main>
+        <h2>Our Products</h2>
+
+        <!-- Форма поиска (Note 5/6) -->
+        <form action="products.html" method="get">
+            <p>
+                <label for="q">Search the shop</label>
+                <input type="search" id="q" name="q" list="popular" placeholder="milk, bread, water...">
+                <datalist id="popular">
+                    <option value="bread"></option>
+                    <option value="milk"></option>
+                    <option value="water"></option>
+                    <option value="eggs"></option>
+                    <option value="tea"></option>
+                </datalist>
+                <button type="submit">Search</button>
+            </p>
+        </form>
+
+        <!-- Карточки товаров через flexbox (Note 6, Шаг 25) -->
+        <section class="cards">
+            <article class="card">
+                <h3>Bread (non)</h3>
+                <p>Fresh from the Labzak bakery every morning at 7:30.</p>
+                <p class="price">4 000 so'm</p>
+            </article>
+            <article class="card">
+                <h3>Water, 1.5 l</h3>
+                <p>Still or sparkling. Ten bottles and we deliver for free.</p>
+                <p class="price">5 000 so'm</p>
+            </article>
+            <article class="card">
+                <h3>Tea, 100 g</h3>
+                <p>Black, green and the one with cardamom.</p>
+                <p class="price">12 000 so'm</p>
+            </article>
+        </section>
+
+        <h3>Full Catalogue</h3>
+        <ul>
+            <li>Groceries
+                <ul>
+                    <li>Bread</li>
+                    <li>Milk</li>
+                    <li>Eggs</li>
+                </ul>
+            </li>
+            <li>Drinks
+                <ul>
+                    <li>Water</li>
+                    <li>Juice</li>
+                    <li>Kefir</li>
+                </ul>
+            </li>
+            <li>Snacks
+                <ul>
+                    <li>Potato chips</li>
+                    <li>Chocolate bars</li>
+                    <li>Biscuits</li>
+                </ul>
+            </li>
+            <li>Household
+                <ul>
+                    <li>Tissues</li>
+                    <li>Dishwashing liquid</li>
+                    <li>Wet wipes</li>
+                </ul>
+            </li>
+            <li>Stationery
+                <ul>
+                    <li>Pens</li>
+                    <li>Notebooks</li>
+                    <li>Sticky notes</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>2026 Labzak Minimarket · Labzak street, Tashkent</p>
+    </footer>
+</body>
+</html>
